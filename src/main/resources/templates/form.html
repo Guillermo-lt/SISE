@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Registro de Alumno</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                </div>
+                <div class="card-body">
+                    <form action="/registrar" method="post" th:object="${user}">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" th:field="*{nombre}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellidoPaterno" class="form-label">Apellido Paterno:</label>
+                            <input type="text" class="form-control" id="apellidoPaterno" th:field="*{apellidoPaterno}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellidoMaterno" class="form-label">Apellido Materno:</label>
+                            <input type="text" class="form-control" id="apellidoMaterno" th:field="*{apellidoMaterno}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento:</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" th:field="*{fechaNacimiento}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lugarResidencia" class="form-label">Lugar de Residencia:</label>
+                            <input type="text" class="form-control" id="lugarResidencia" th:field="*{lugarResidencia}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edad" class="form-label">Edad:</label>
+                            <input type="number" class="form-control" id="edad" th:field="*{edad}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono:</label>
+                            <input type="text" class="form-control" id="telefono" th:field="*{telefono}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo Electrónico:</label>
+                            <input type="email" class="form-control" id="correo" th:field="*{correo}" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Registrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

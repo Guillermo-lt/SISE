@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Registro Exitoso</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="bg-light">
+        <div class="container mt-5">
+            <div class="alert alert-success">
+                <h4 class="alert-heading">¡Registro Exitoso!</h4>
+                <p>Datos registrados:</p>
+                <ul>
+                    <li>Nombre: <span th:text="${user.nombre}"></span></li>
+                    <li>Apellido Paterno: <span th:text="${user.apellidoPaterno}"></span></li>
+                    <li>Apellido Materno: <span th:text="${user.apellidoMaterno}"></span></li>
+                    <li>Fecha de Nacimiento: <span th:text="${user.fechaNacimiento}"></span></li>
+                    <li>Lugar de Residencia: <span th:text="${user.lugarResidencia}"></span></li>
+                    <li>Edad: <span th:text="${user.edad}"></span></li>
+                    <li>Teléfono: <span th:text="${user.telefono}"></span></li>
+                    <li>Correo Electrónico: <span th:text="${user.correo}"></span></li>
+                </ul>
+                <hr>
+                <p class="mb-0">Gracias por registrarte.</p>
+            </div>
+        </div>
+    </body>
+</html>
